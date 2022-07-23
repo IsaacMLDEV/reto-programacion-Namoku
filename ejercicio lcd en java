@@ -1,0 +1,269 @@
+import java.util.Scanner;
+
+class Main {
+
+  String top = "";
+  String[] middle;
+  String[] bottom;
+
+  public Main(int height) {
+    middle = new String[height];
+    bottom = new String[height];
+    for (int i = 0; i < height; i++) {
+      middle[i] = "";
+      bottom[i] = "";
+    }
+  }
+
+  public void one(int width, int height) {
+    top += " ";
+    middle[middle.length - 1] += "|";
+    bottom[bottom.length - 1] += "|";
+    for (int i = 0; i < height - 1; i++) {
+      middle[i] += "|";
+      bottom[i] += "|";
+    }
+  }
+
+  public void two(int width, int height) {
+    top += " ";
+    middle[middle.length - 1] += " ";
+    bottom[bottom.length - 1] += "|";
+    String middleAux = " ";
+    String bottomAux = " ";
+    for (int i = 0; i < width; i++) {
+      top += "_";
+      middle[middle.length - 1] += "_";
+      bottom[bottom.length - 1] += "_";
+      middleAux += " ";
+      bottomAux += " ";
+    }
+    top += " ";
+    middle[middle.length - 1] += "|";
+    bottom[middle.length - 1] += " ";
+    for (int i = 0; i < height - 1; i++) {
+      middle[i] += middleAux + "|";
+      bottom[i] += "|" + bottomAux;
+    }
+  }
+
+  public void three(int width, int height) {
+    top += " ";
+    middle[middle.length - 1] += " ";
+    bottom[bottom.length - 1] += " ";
+    String middleAux = " ";
+    String bottomAux = " ";
+    for (int i = 0; i < width; i++) {
+      top += "_";
+      middle[middle.length - 1] += "_";
+      bottom[bottom.length - 1] += "_";
+      middleAux += " ";
+      bottomAux += " ";
+    }
+    top += " ";
+    middle[middle.length - 1] += "|";
+    bottom[middle.length - 1] += "|";
+    for (int i = 0; i < height - 1; i++) {
+      middle[i] += middleAux + "|";
+      bottom[i] += bottomAux + "|";
+    }
+  }
+
+  public void four(int width, int height) {
+    top += " ";
+    middle[middle.length - 1] += "|";
+    bottom[bottom.length - 1] += " ";
+    String middleAux = "|";
+    String bottomAux = " ";
+    for (int i = 0; i < width; i++) {
+      top += " ";
+      middle[middle.length - 1] += "_";
+      bottom[bottom.length - 1] += " ";
+      middleAux += " ";
+      bottomAux += " ";
+    }
+    top += " ";
+    middle[middle.length - 1] += "|";
+    bottom[middle.length - 1] += "|";
+    for (int i = 0; i < height - 1; i++) {
+      middle[i] += middleAux + "|";
+      bottom[i] +=  bottomAux + "|";
+    }
+  }
+
+  public void five(int width, int height) {
+    top += " ";
+    middle[middle.length - 1] += "|";
+    bottom[bottom.length - 1] += " ";
+    String middleAux = " ";
+    String bottomAux = " ";
+    for (int i = 0; i < width; i++) {
+      top += "_";
+      middle[middle.length - 1] += "_";
+      bottom[bottom.length - 1] += "_";
+      middleAux += " ";
+      bottomAux += " ";
+    }
+    top += " ";
+    middle[middle.length - 1] += " ";
+    bottom[middle.length - 1] += "|";
+    for (int i = 0; i < height - 1; i++) {
+      middle[i] += "|" + middleAux;
+      bottom[i] += bottomAux + "|";
+    }
+  }
+
+  public void six(int width, int height) {
+    top += " ";
+    middle[middle.length - 1] += "|";
+    bottom[bottom.length - 1] += "|";
+    String middleAux = "|";
+    String bottomAux = "|";
+    for (int i = 0; i < width; i++) {
+      top += "_";
+      middle[middle.length - 1] += "_";
+      bottom[bottom.length - 1] += "_";
+      middleAux += " ";
+      bottomAux += " ";
+    }
+    top += " ";
+    middle[middle.length - 1] += " ";
+    bottom[middle.length - 1] += "|";
+    for (int i = 0; i < height - 1; i++) {
+      middle[i] += middleAux + " ";
+      bottom[i] += bottomAux + "|";
+    }
+  }
+
+  public void seven(int width, int height) {
+    top += " ";
+    middle[middle.length - 1] += " ";
+    bottom[bottom.length - 1] += " ";
+    String middleAux = " ";
+    String bottomAux = " ";
+    for (int i = 0; i < width; i++) {
+      top += "_";
+      middle[middle.length - 1] += " ";
+      bottom[bottom.length - 1] += " ";
+      middleAux += " ";
+      bottomAux += " ";
+    }
+    top += " ";
+    middle[middle.length - 1] += "|";
+    bottom[middle.length - 1] += "|";
+    for (int i = 0; i < height - 1; i++) {
+      middle[i] += middleAux + "|";
+      bottom[i] += bottomAux + "|";
+    }
+  }
+
+  public void eigth(int width, int height) {
+    top += " ";
+    middle[middle.length - 1] += "|";
+    bottom[bottom.length - 1] += "|";
+    String middleAux = "|";
+    String bottomAux = "|";
+    for (int i = 0; i < width; i++) {
+      top += "_";
+      middle[middle.length - 1] += "_";
+      bottom[bottom.length - 1] += "_";
+      middleAux += " ";
+      bottomAux += " ";
+    }
+    top += " ";
+    middle[middle.length - 1] += "|";
+    bottom[middle.length - 1] += "|";
+    for (int i = 0; i < height - 1; i++) {
+      middle[i] += middleAux + "|";
+      bottom[i] += bottomAux + "|";
+    }
+  }
+
+  public void nine(int width, int height) {
+    top += " ";
+    middle[middle.length - 1] += "|";
+    bottom[bottom.length - 1] += " ";
+    String middleAux = "|";
+    String bottomAux = " ";
+    for (int i = 0; i < width; i++) {
+      top += "_";
+      middle[middle.length - 1] += "_";
+      bottom[bottom.length - 1] += "_";
+      middleAux += " ";
+      bottomAux += " ";
+    }
+    top += " ";
+    middle[middle.length - 1] += "|";
+    bottom[bottom.length - 1] += "|";
+    for (int i = 0; i < height - 1; i++) {
+      middle[i] += middleAux + "|";
+      bottom[i] += bottomAux + "|";
+    }
+  }
+
+  public void printNumber() {
+    System.out.println(top);
+    for (int i = 0; i < middle.length; i++) {
+      System.out.println(middle[i]);
+    }
+    for (int i = 0; i < middle.length; i++) {
+      System.out.println(bottom[i]);
+    }
+  }
+
+  public static void main(String[] args) {
+    // Para evaluar parte 1 del ejercicio, ingrense 1 y 1 tanto en el ancho como
+    // alto
+    Scanner ans = new Scanner(System.in);
+    System.out.println("Por favor ingrese numero de 1 en adelante :");
+    String number = ans.nextLine();
+
+    Scanner wid = new Scanner(System.in);
+    System.out.println("Por favor ingrese ancho: ");
+    int width = wid.nextInt();
+
+    Scanner hei = new Scanner(System.in);
+    System.out.println("Por favor ingrese alto: ");
+    int height = hei.nextInt();
+
+    Main lcdConverter = new Main(height);
+    char digit;
+    for (int i = 0; i < number.length(); i++) {
+      digit = number.charAt(i);
+      switch (digit) {
+        case '1':
+          lcdConverter.one(width, height);
+          break;
+        case '2':
+          lcdConverter.two(width, height);
+          break;
+        default:
+          break;
+        case '3':
+          lcdConverter.three(width, height);
+          break;
+
+        case '4':
+          lcdConverter.four(width, height);
+          break;
+        case '5':
+          lcdConverter.five(width, height);
+          break;
+        case '6':
+          lcdConverter.six(width, height);
+          break;
+        case '7':
+          lcdConverter.seven(width, height);
+          break;
+        case '8':
+          lcdConverter.eigth(width, height);
+          break;
+        case '9':
+          lcdConverter.nine(width, height);
+          break;
+      }
+    }
+    System.out.println("Numero convertido a LCD:");
+    lcdConverter.printNumber();
+  }
+}
